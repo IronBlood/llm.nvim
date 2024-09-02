@@ -41,9 +41,14 @@ When `api_token` is set, it will be passed as a header: `Authorization: Bearer <
 
 **llm-ls** will try to add the correct path to the url to get completions if it does not already end with said path. You can disable this behavior by setting `disable_url_path_completion` to true.
 
-#### Inference API
+<table>
+<tr>
+<td>
+Inference API
+</td>
+<td>
 
-##### **backend = "huggingface"**
+**backend = "huggingface"**
 
 [API](https://huggingface.co/docs/api-inference/detailed_parameters#text-generation-task)
 
@@ -61,9 +66,16 @@ When `api_token` is set, it will be passed as a header: `Authorization: Bearer <
 
 Note: the `model`'s value will be appended to the url like so : `{url}/model/{model}` as this is how we route requests to the right model.
 
-#### [Ollama](https://ollama.com/)
+</td>
+</tr>
+<tr>
+<td>
 
-##### **backend = "ollama"**
+[Ollama](https://ollama.com/)
+</td>
+<td>
+
+**backend = "ollama"**
 
 [API](https://github.com/ollama/ollama/blob/main/docs/api.md)
 
@@ -85,10 +97,16 @@ Refer to Ollama's documentation on how to run ollama. Here is an example configu
 ```
 
 Note: `model`'s value will be added to the request body.
+</td>
+</tr>
 
-#### Open AI
+<tr>
+<td>
+Open AI
+</td>
+<td>
 
-##### **backend = "openai"**
+**backend = "openai"**
 
 Refer to Ollama's documentation on how to run ollama. Here is an example configuration:
 
@@ -105,10 +123,17 @@ Refer to Ollama's documentation on how to run ollama. Here is an example configu
 ```
 
 Note: `model`'s value will be added to the request body.
+</td>
+</tr>
 
-#### [TGI](https://github.com/huggingface/text-generation-inference)
+<tr>
+<td>
 
-##### **backend = "tgi"**
+[TGI](https://github.com/huggingface/text-generation-inference)
+</td>
+<td>
+
+**backend = "tgi"**
 
 [API](https://huggingface.github.io/text-generation-inference/#/Text%20Generation%20Inference/generate)
 
@@ -128,9 +153,20 @@ Refer to TGI's documentation on how to run TGI. Here is an example configuration
 }
 ```
 
+</td>
+</tr>
+</table>
+
 ### Models
 
-#### [Starcoder](https://huggingface.co/bigcode/starcoder)
+<table>
+
+<tr>
+<td>
+
+[Starcoder](https://huggingface.co/bigcode/starcoder)
+</td>
+<td>
 
 ```lua
 {
@@ -152,7 +188,15 @@ Refer to TGI's documentation on how to run TGI. Here is an example configuration
 > [!NOTE]
 > These are the default config values
 
-#### [CodeLlama](https://huggingface.co/codellama/CodeLlama-13b-hf)
+</td>
+</tr>
+
+<tr>
+<td>
+
+[CodeLlama](https://huggingface.co/codellama/CodeLlama-13b-hf)
+</td>
+<td>
 
 ```lua
 {
@@ -173,6 +217,9 @@ Refer to TGI's documentation on how to run TGI. Here is an example configuration
 
 > [!NOTE]
 > Spaces are important here
+</td>
+</tr>
+</table>
 
 ### [**llm-ls**](https://github.com/huggingface/llm-ls)
 
